@@ -1,3 +1,4 @@
+/*telling browser to use full height and wall-to-wall content */
 body, html {
     height: 100%;
     margin: 0;
