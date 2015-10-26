@@ -9,7 +9,6 @@ Parse.initialize("kq3RcDcORXH1pEYMGnYHRus3BcGl88MIlOD1jfPf", "vJ5QfFElAa4wR5rhej
 
 $(function() {
     'use strict';
-
     //new Task class for parse
     var Task = Parse.Object.extend('Task');
     //new query that will return all tasks ordered by createdAt
@@ -32,7 +31,6 @@ $(function() {
     function displayError(err) {
         errorMessage.text(err.message);
         errorMessage.fadeIn();
-
     }
 
     function showMessage(message) {
@@ -60,11 +58,13 @@ $(function() {
 
     function onData(result) {
         tasks = result;
+        console.log(result);
         renderTasks();
     }
 
     function renderTasks() {
         tasksList.empty();
+        console.log(tasks);
         tasks.forEach(function(task) {
             var li = $(document.createElement('li'))
                 .text(task.get('title'))
@@ -83,7 +83,7 @@ $(function() {
         });
     }
 
-    //when the ser submits thhe new task form...
+    //when the ser submits the new task form...
     $('#new-task-form').submit(function(evt) {
         evt.preventDefault();
         var titleInput = $(this).find('[name="title"]');
