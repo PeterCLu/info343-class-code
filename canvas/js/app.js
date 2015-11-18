@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
             else {
                 //game over
                 ctx.font = '20px Helvetica';
-                var message = 'You lose'
+                var message = 'you lost.'
 
                 //get width of game over text
                 var metrics = ctx.measureText(message);
-                ctx.fillText('Because of this.', ball.left + 4, ball.top - 6);
+                ctx.fillText('Because of this', ball.left + 4, ball.top - 6);
 
                 ctx.fillText(message, (canvas.width - metrics.width)/2, (canvas.height - 20)/2);
                 return false;
