@@ -7,10 +7,30 @@
     </head>
     <body>
         <p>
+            <button onclick="eraser()">Eraser</button>
+        </p>
+
+        <p>
+            <label for="line-color-inp">Line Color:</label>
+            <input type="color" name="line-color-inp" id="line-color-inp" value="#000000">
+        </p>
+
+        <p>
+            <label for="line-width-inp">Line Width:</label>
+            <input type="number" name = 'line-width-inp' id = 'line-width-inp' value="2"/>
+        </p>
+
+        <p>
             <video autoplay></video>
         </p>
+
         <p>
             <canvas></canvas>
+        </p>
+
+        <p>
+            <button id="btnSnapshot">Snapshot</button>
+            <img src="" alt="snapshot of canvas"/>
         </p>
 
         <script src="js/app.js"></script>    
